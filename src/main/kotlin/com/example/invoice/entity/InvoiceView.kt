@@ -4,8 +4,8 @@ import jakarta.persistence.*
 import java.time.LocalDate
 
 @Entity
-@Table(name = "invoice")
-class Invoice {
+@Table(name = "invoice_view")
+class InvoiceView {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(updatable = false)
@@ -20,10 +20,7 @@ class Invoice {
     @Column(name = "total")
     var total: Double? = null
 
-    @ManyToOne
-    @JoinColumn(name = "client_id", nullable = false)
-    var client: Client? = null
+    var fullname: String? = null
 
-    @OneToMany(mappedBy = "invoice", cascade = [CascadeType.ALL], orphanRemoval = true)
-    var details: MutableList<Detail> = mutableListOf()
+
 }

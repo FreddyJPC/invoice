@@ -1,7 +1,7 @@
-package com.example.demo.controller
+package com.example.invoice.controller
 
-import com.example.demo.entity.Product
-import com.example.demo.service.ProductService
+import com.example.invoice.entity.Product
+import com.example.invoice.service.ProductService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 

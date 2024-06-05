@@ -1,7 +1,7 @@
-package com.example.demo.service
+package com.example.invoice.service
 
-import com.example.demo.entity.Client
-import com.example.demo.repository.ClientRepository
+import com.example.invoice.repository.ClientRepository
+import com.example.invoice.entity.Client
 import jakarta.persistence.EntityNotFoundException
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

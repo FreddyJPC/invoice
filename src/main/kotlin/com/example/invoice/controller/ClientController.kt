@@ -1,12 +1,12 @@
-package com.example.demo.controller
+package com.example.invoice.controller
 
-import com.example.demo.entity.Client
-import com.example.demo.service.ClientService
+import com.example.invoice.entity.Client
+import com.example.invoice.service.ClientService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/clients")
+@RequestMapping("/client")
 class ClientController {
 
     @Autowired

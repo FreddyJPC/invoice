@@ -1,9 +1,9 @@
-package com.example.demo.entity
+package com.example.invoice.entity
 
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "detail", uniqueConstraints = [UniqueConstraint(columnNames = ["invoice_id", "product_id"])])
+@Table(name = "detail")
 class Detail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,10 +19,11 @@ class Detail {
     @Column(name = "subtotal", insertable = false, updatable = false)
     var subtotal: Double? = null
 
-    @Column(name = "invoice_id")
-    var invoiceId: Long? = null
+    @ManyToOne
+    @JoinColumn(name = "invoice_id", nullable = false)
+    var invoice: Invoice? = null
 
-    @Column(name = "product_id")
-    var productId: Long? = null
-
+    @ManyToOne
+    @JoinColumn(name = "product_id", nullable = false)
+    var product: Product? = null
 }

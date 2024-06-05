@@ -1,9 +1,9 @@
-package com.example.demo.entity
+package com.example.invoice.entity
 
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "client", uniqueConstraints = [UniqueConstraint(columnNames = ["nui"])])
+@Table(name = "client")
 class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
